@@ -1,0 +1,3 @@
+1) Check size_t in all functions. size_t->int
+2) ft_memccpy.c "break ;"? Do I really need space after break? Check this... 
+3) Chekc all names of variables. the are different in MacOS man and my man.
