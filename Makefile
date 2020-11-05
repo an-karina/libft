@@ -7,7 +7,9 @@ SRC		= ${SRCDIR}ft_memset.c \
 		  ${SRCDIR}ft_memccpy.c \
 		  ${SRCDIR}ft_memmove.c \
 		  ${SRCDIR}ft_memchr.c \
-		  ${SRCDIR}ft_memcmp.c
+		  ${SRCDIR}ft_memcmp.c \
+		  ${SRCDIR}ft_strlen.c \
+		  ${SRCDIR}ft_strlcpy.c
 OBJ		= ${patsubst ${SRCDIR}%.c, ${OBJDIR}%.o, ${SRC}}
 CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror
