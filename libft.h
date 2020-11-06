@@ -6,13 +6,12 @@
 /*   By: jhleena <jhleena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 11:46:40 by jhleena           #+#    #+#             */
-/*   Updated: 2020/11/06 13:27:52 by jhleena          ###   ########.fr       */
+/*   Updated: 2020/11/06 19:57:19 by jhleena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# define INT_MAX
 
 # include <stdlib.h>
 
@@ -30,5 +29,10 @@ char    *ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_atoi(const char *str);
+int		ft_isalpha(int c);
+int		ft_isdigit(int c);
+int		ft_isalnum(int c);
+int		ft_isascii(int c);
 
 #endif

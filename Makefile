@@ -14,8 +14,13 @@ SRC		= ${SRCDIR}ft_memset.c \
 		  ${SRCDIR}ft_strchr.c \
 		  ${SRCDIR}ft_strrchr.c \
 		  ${SRCDIR}ft_strnstr.c \
-		  ${SRCDIR}ft_strncmp.c 
-		  
+		  ${SRCDIR}ft_strncmp.c \
+		  ${SRCDIR}ft_atoi.c \
+		  ${SRCDIR}ft_isalpha.c \
+		  ${SRCDIR}ft_isdigit.c \
+		  ${SRCDIR}ft_isalnum.c \
+		  ${SRCDIR}ft_isascii.c 
+
 OBJ		= ${patsubst ${SRCDIR}%.c, ${OBJDIR}%.o, ${SRC}}
 CC		= gcc
 CFLAGS	= -Wall -Wextra -Werror
