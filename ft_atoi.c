@@ -6,7 +6,7 @@
 /*   By: jhleena <jhleena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/06 13:04:25 by jhleena           #+#    #+#             */
-/*   Updated: 2020/11/06 13:23:11 by jhleena          ###   ########.fr       */
+/*   Updated: 2020/11/06 13:33:43 by jhleena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,8 @@
 int	ft_atoi(const char *str)
 {
 	int i;
-	int result;
+	unsigned long result;
+	//nedd to make long boreder
 	int sign;
 	
 	i = 0;
@@ -30,8 +31,12 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i]<='9' && str[i]>= '0')
 	{
+		if ((result > ) && (sign == 1))
+			return (-1);
+		if ((result == INT_MAX) && (sign == -1))
+
 		result = 10 * result + (str[i] - '0');
 		i++;
 	}
-	result (result * sign);
+	return (result * sign);
 }

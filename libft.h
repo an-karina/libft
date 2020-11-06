@@ -6,12 +6,13 @@
 /*   By: jhleena <jhleena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/03 11:46:40 by jhleena           #+#    #+#             */
-/*   Updated: 2020/11/06 12:24:36 by jhleena          ###   ########.fr       */
+/*   Updated: 2020/11/06 13:27:52 by jhleena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# define INT_MAX
 
 # include <stdlib.h>
 
