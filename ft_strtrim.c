@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhleena <jhleena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 11:52:39 by jhleena           #+#    #+#             */
-/*   Updated: 2020/11/09 12:14:31 by jhleena          ###   ########.fr       */
+/*   Created: 2020/11/09 15:00:21 by jhleena           #+#    #+#             */
+/*   Updated: 2020/11/09 16:25:14 by jhleena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t	i;
-	size_t	n;
+	size_t	finish;
+	char	*p;
 
-	n = ft_strlen(dst);
-	i = n + ft_strlen(src);
-	if (n >= dstsize)
-		return (dstsize + ft_strlen(src));
-	while (*dst)
-		dst++;
-	while (*src != '\0' && (dstsize - n - 1))
+	if (!s1)
+		return (NULL);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	finish = ft_strlen(s1);
+	while (finish && ft_strchr(set, s1[finish - 1]))
+		finish--;
+	p = malloc(sizeof(char) * (finish + 1));
+	if (p)
 	{
-		*dst++ = *src++;
-		dstsize--;
+		ft_memcpy(p, s1, finish);
+		p[finish] = '\0';
 	}
-	*dst = '\0';
-	return (i);
+	return (p);
 }

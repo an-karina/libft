@@ -25,7 +25,10 @@ SRC		= ${SRCDIR}ft_memset.c \
 		  ${SRCDIR}ft_tolower.c \
 		  ${SRCDIR}ft_calloc.c \
 		  ${SRCDIR}ft_strdup.c \
-		  ${SRCDIR}ft_substr.c 
+		  ${SRCDIR}ft_substr.c \
+		  ${SRCDIR}ft_strjoin.c \
+		  ${SRCDIR}ft_strtrim.c \
+		  ${SRCDIR}ft_itoa.c 
 
 OBJ		= ${patsubst ${SRCDIR}%.c, ${OBJDIR}%.o, ${SRC}}
 CC		= gcc

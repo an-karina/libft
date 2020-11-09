@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jhleena <jhleena@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/05 11:52:39 by jhleena           #+#    #+#             */
-/*   Updated: 2020/11/09 12:14:31 by jhleena          ###   ########.fr       */
+/*   Created: 2020/11/09 10:50:03 by jhleena           #+#    #+#             */
+/*   Updated: 2020/11/09 15:15:42 by jhleena          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	size_t	i;
-	size_t	n;
+	size_t		len_s1;
+	size_t		len_s2;
+	char		*p;
 
-	n = ft_strlen(dst);
-	i = n + ft_strlen(src);
-	if (n >= dstsize)
-		return (dstsize + ft_strlen(src));
-	while (*dst)
-		dst++;
-	while (*src != '\0' && (dstsize - n - 1))
+	if (!s1 && !s2)
+		return (NULL);
+	p = NULL;
+	len_s1 = ft_strlen(s1);
+	len_s2 = ft_strlen(s2);
+	p = malloc(sizeof(char) * (len_s1 + len_s2 + 1));
+	if (p)
 	{
-		*dst++ = *src++;
-		dstsize--;
+		ft_strlcpy(p, s1, len_s1 + 1);
+		if (len_s2)
+			ft_strlcat(p, s2, len_s2 + len_s1 + 1);
 	}
-	*dst = '\0';
-	return (i);
+	return (p);
 }
