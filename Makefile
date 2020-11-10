@@ -28,7 +28,11 @@ SRC		= ${SRCDIR}ft_memset.c \
 		  ${SRCDIR}ft_substr.c \
 		  ${SRCDIR}ft_strjoin.c \
 		  ${SRCDIR}ft_strtrim.c \
-		  ${SRCDIR}ft_itoa.c 
+		  ${SRCDIR}ft_itoa.c \
+			${SRCDIR}ft_strmapi.c \
+			${SRCDIR}ft_putchar_fd.c \
+			${SRCDIR}ft_putstr_fd.c \
+			${SRCDIR}ft_putendl_fd.c
 
 OBJ		= ${patsubst ${SRCDIR}%.c, ${OBJDIR}%.o, ${SRC}}
 CC		= gcc
